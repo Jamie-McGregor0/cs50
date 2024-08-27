@@ -66,5 +66,5 @@ int second(long n){
     while(n / 100 > 0)
         n = n / 10;
 
-    return n;
+    return n % 10;
 }
