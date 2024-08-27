@@ -10,7 +10,7 @@ int main(void){
     int x;
     int n = get_long("Number: ");
     int l = length(n);
-    int first = first(n);
+    int f = first(n);
 
     for(int i = 0; i < l / 2; i ++){
 
@@ -30,7 +30,7 @@ int main(void){
         else if(l == 15)
             printf("AMEX\n");
 
-        else if(first == 4)
+        else if(f == 4)
             printf("VISA\n");
 
         else
