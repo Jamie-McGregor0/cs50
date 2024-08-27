@@ -38,12 +38,16 @@ int main(void){
 
 }
 
-int length(int s){
+int length(int n){
     int length = 1;
-    while(s / 10 > 0){
-        s = s / 10;
+    while(n / 10 > 0){
+        n = n / 10;
         length ++;
     }
 
 return length;
+}
+
+int first(int n){
+    while()
 }
