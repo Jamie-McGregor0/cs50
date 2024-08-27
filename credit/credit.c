@@ -21,12 +21,20 @@ int main(void){
     }
 
     if(sum % 10 == 0){
-        i
+
+        if(l == 13 || l == 16)
+            printf("VISA\n");
+
+        else if(l == 15)
+            printf("AMEX\n");
+
+        else
+            printf("MASTERCARD\n");
+
     }
 
-
-
-
+    else
+        printf("INVALID\n");
 
 }
 
