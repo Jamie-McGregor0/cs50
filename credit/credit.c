@@ -22,13 +22,13 @@ int main(void){
 
     if(sum % 10 == 0){
 
-        if(l == 13 || l == 16)
+        if(l == 13)
             printf("VISA\n");
 
         else if(l == 15)
             printf("AMEX\n");
 
-        else
+        else if()
             printf("MASTERCARD\n");
 
     }
