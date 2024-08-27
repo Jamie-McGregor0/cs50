@@ -27,7 +27,11 @@ int main(void){
 }
 
 length(int s){
+    int length;
+    while(s / 10 > 0){
+        s = s / 10;
+        length ++;
+    }
 
-
+return length;
 }
-while(s)
