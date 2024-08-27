@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <cs50.h>
 
-length(int s)
+int length(int s);
 
 int main(void){
 
     int sum = 0;
     int x;
     int n = get_long("Number: ");
+    int l = length(n);
 
     for(int i = 0; i < n; i ++;){
 
@@ -17,10 +18,11 @@ int main(void){
         n = n / 10;
         sum = sum + x / 10 + x % 10;
 
-
     }
 
-
+    if(sum % 10 == 0){
+        i
+    }
 
 
 
@@ -28,7 +30,7 @@ int main(void){
 
 }
 
-length(int s){
+int length(int s){
     int length = 1;
     while(s / 10 > 0){
         s = s / 10;
