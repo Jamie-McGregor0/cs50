@@ -10,11 +10,11 @@ int main(void){
     for(int i = 0; i < n; i ++;){
 
         n = n / 10;
-        x = n % 10;
+        x = n % 10 * 2;
         n = n / 10;
 
-        sum = sum + (x / 10 + x % 10) * 2;
-        
+        sum = sum + x / 10 + x % 10;
+
 
     }
 
