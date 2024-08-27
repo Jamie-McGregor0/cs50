@@ -25,3 +25,9 @@ int main(void){
 
 
 }
+
+length(int s){
+
+
+}
+while(s)
