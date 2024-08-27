@@ -14,7 +14,7 @@ int main(void){
     int f = first(n);
     int s = second(n);
 
-    for(int i = 0; i < l / 2; i ++){
+    for(int i = 0; i <= l / 2; i ++){
 
         sum  = sum + n % 10;
         n = n / 10;
