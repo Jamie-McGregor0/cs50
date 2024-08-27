@@ -2,6 +2,7 @@
 #include <cs50.h>
 
 int length(int s);
+int first(int n);
 
 int main(void){
 
@@ -9,6 +10,7 @@ int main(void){
     int x;
     int n = get_long("Number: ");
     int l = length(n);
+    int first = first(n);
 
     for(int i = 0; i < l / 2; i ++){
 
@@ -28,7 +30,10 @@ int main(void){
         else if(l == 15)
             printf("AMEX\n");
 
-        else if()
+        else if(first == 4)
+            printf("VISA\n");
+
+        else
             printf("MASTERCARD\n");
 
     }
