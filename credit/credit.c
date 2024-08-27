@@ -3,7 +3,7 @@
 
 int main(void){
 
-    int sum;
+    int sum = 0;
     int x;
     int n = get_long("Number: ");
 
@@ -11,7 +11,10 @@ int main(void){
 
         n = n / 10;
         x = n % 10;
+        n = n / 10;
 
+        sum = sum + (x / 10 + x % 10) * 2;
+        
 
     }
 
