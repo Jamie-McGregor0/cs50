@@ -26,14 +26,11 @@ int main(void){
 
     if(sum % 10 == 0){
 
-        if(l == 13 && f == 4)
+        if((l == 13 || l == 16) && f == 4)
             printf("VISA\n");
 
         else if(l == 15 && f == 3 && (s == 4 || s == 7))
             printf("AMEX\n");
-
-        else if(f == 4)
-            printf("VISA\n");
 
         else if(f == 5 && s <= 5)
             printf("MASTERCARD\n");
