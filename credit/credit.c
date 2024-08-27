@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
+length(int s)
+
 int main(void){
 
     int sum = 0;
@@ -27,7 +29,7 @@ int main(void){
 }
 
 length(int s){
-    int length;
+    int length = 1;
     while(s / 10 > 0){
         s = s / 10;
         length ++;
