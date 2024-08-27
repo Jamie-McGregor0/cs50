@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int length(int s);
-int first(int n);
+int length(long s);
+int first(long n);
 
 int main(void){
 
     int sum = 0;
     int x;
-    int n = get_long("Number: ");
+    long n = get_long("Number: ");
     int l = length(n);
     int f = first(n);
 
@@ -43,7 +43,7 @@ int main(void){
 
 }
 
-int length(int n){
+int length(long n){
     int length = 1;
     while(n / 10 > 0){
         n = n / 10;
@@ -53,7 +53,7 @@ int length(int n){
 return length;
 }
 
-int first(int n){
+int first(long n){
     while(n / 10 > 0)
         n = n / 10;
 
