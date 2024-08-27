@@ -35,6 +35,9 @@ int main(void){
         else if(f == 5 && s <= 5)
             printf("MASTERCARD\n");
 
+        else
+            printf("INVALID\n");
+
     }
 
     else
