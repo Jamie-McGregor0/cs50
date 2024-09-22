@@ -17,7 +17,7 @@ int main(void){
 
         for(int j = 0; j < 26; j++){
 
-            if(x1[i] == chr[j])
+            if(tolower(x1[i]) == chr[j])
                 sum1 += numb[j];
 
         }
@@ -27,7 +27,7 @@ int main(void){
 
         for(int j = 0; j < 26; j++){
 
-            if(x2[i] == chr[j])
+            if(tolower(x2[i]) == chr[j])
                 sum2 += numb[j];
 
         }
