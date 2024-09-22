@@ -5,23 +5,15 @@
 int main(void){
 
     int numb[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
-    char chr[] = "abcdefghijklmnopqrstuvwxyz";
+    string chr = "abcdefghijklmnopqrstuvwxyz";
 
-    string s1 = get_string("Player 1: ");
-    string s2 = get_string("Player 2: ");
-
-    int length1 = strlen(s1);
-    int length2 = strlen(s2);
-
-    char x1[length1];
-    char x2[length2];
-
-    strcpy(x1, s1);
+    string x1 = get_string("Player 1: ");
+    string x2 = get_string("Player 2: ");
 
     int sum1 = 0;
     int sum2 = 0;
 
-    for(int i = 0; i < length1; i++){
+    for(int i = 0; i < strlen(x1); i++){
 
         for(int j = 0; j < 26; j++){
 
@@ -31,7 +23,7 @@ int main(void){
         }
     }
 
-    for(int i = 0; i < length2; i++){
+    for(int i = 0; i < strlen(x2); i++){
 
         for(int j = 0; j < 26; j++){
 
