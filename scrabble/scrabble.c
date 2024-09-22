@@ -34,7 +34,7 @@ int main(void){
     }
 
     if(sum1 == sum2)
-        printf(sum1);
+        printf("sum1\n",%i);
 
     else if(sum1 > sum2)
         printf("Player 1 wins!\n");
