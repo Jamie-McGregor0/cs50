@@ -25,8 +25,7 @@ int main(void){
 
         for(int j = 0; j < 26; j++){
 
-            if(x1[i] == chr[j])6
-            
+            if(x1[i] == chr[j])
                 sum1 += numb[j];
 
         }
