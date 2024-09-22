@@ -27,14 +27,14 @@ int main(void){
 
         for(int j = 0; j < 26; j++){
 
-            if(x1[i] == chr[j])
+            if(x2[i] == chr[j])
                 sum2 += numb[j];
 
         }
     }
 
     if(sum1 == sum2)
-        printf("%i\n",sum1);
+        printf("%i\n",sum2);
 
     else if(sum1 > sum2)
         printf("Player 1 wins!\n");
