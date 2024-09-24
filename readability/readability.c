@@ -18,24 +18,27 @@ int main(void){
     for(int i = 0; i < length; i++){
 
         if (punc(sen[i]) == 1){ // "!"
-            l -= 1;
-            s += 1;
-            w += 1;
+            l ++;
+            s ++;
+            w ++;
         }
 
         else if (punc(sen[i]) == 2){ // ','
-            l -= 1;
-            w += 1;
+            l --;
+            w ++;
         }
 
-        else if (punc(sen[i]) == 3){ // ' '
+        else if (punc(sen[i]) == 3) // '\''
+            l --;
+
+        else if (punc(sen[i]) == 4){ // ' '
 
             if (punc(sen[i-1]) == 1 || punc(sen[i-1]) == 2) // "! "
-                l -= 1;
+                l --;
 
             else{ // "A B"
-                l -= 1;
-                w += 1;
+                l --;
+                w ++;
             }
 
         }
@@ -65,10 +68,10 @@ int punc(char x){
     else if (x == ',')
         return 2;
 
-    else if (x == ' ')
+    else if (x == '\'')
         return 3;
 
-    else if (x == "\'")
+    else if (x == ' ')
         return 4;
 
     else
