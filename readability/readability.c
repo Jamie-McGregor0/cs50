@@ -54,6 +54,9 @@ int main(void){
         printf("Grade %i\n", (int)round(index));
 
 
+    printf("%i\n%i\n%i\n", l,s,w);
+
+
 }
 
 int punc(char x){
