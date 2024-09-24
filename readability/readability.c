@@ -47,7 +47,8 @@ int main(void){
 
 
 
-    //printf("%s\n", sen);
+    printf("Grade: %i\n", index);
+
     printf("%i\n%i\n%i\n", l,s,w);
 
 
