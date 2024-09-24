@@ -30,7 +30,7 @@ int main(void){
 
 
     //printf("%s\n", sen);
-    printf("%i\n%i\n%i", l,s,w);
+    printf("%i\n%i\n%i\n", l,s,w);
 
 
 }
