@@ -54,7 +54,7 @@ int main(void){
         printf("Grade %f\n", index);
 
 
-    printf("%i\n%i\n%i\n", l,s,w);
+    printf("%i\n%i\n%i\n%f\n", l,s,w,index);
 
 
 }
