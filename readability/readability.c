@@ -68,6 +68,9 @@ int punc(char x){
     else if (x == ' ')
         return 3;
 
+    else if (x == "'")
+        return 4;
+
     else
         return 0;
 }
