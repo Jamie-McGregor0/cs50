@@ -11,9 +11,9 @@ int main(void){
 
     int length = strlen(sen);
 
-    int l = length; //number of letters
-    int s = 0; //number of sentences
-    int w = 0; //number of words
+    float l = length; //number of letters
+    float s = 0; //number of sentences
+    float w = 0; //number of words
 
     for(int i = 0; i < length; i++){
 
@@ -42,10 +42,7 @@ int main(void){
 
     }
 
-    float index = 0.0588 * (float)(l / w * 100) - 0.296 * (float)(s / w * 100) - 15.8;
-    printf("%i,%i,%d\n", l,w, l / w * 100);
-
-    printf("%f\n", index);
+    float index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
 
     if (index >= 16)
         printf("Grade 16+\n");
@@ -55,8 +52,6 @@ int main(void){
 
     else
         printf("Grade %f\n", index);
-
-
 
 
 }
