@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+int punc(string [i]);
+
 int main(void){
 
     string sen = get_string("Text: ");
@@ -37,4 +39,11 @@ int main(void){
 
 punc(string [i]){
     if (sen[i] == '.' || sen[i] == '!' || sen[i] == '?')
+        return 1;
+
+    else if (sen[i] == ',')
+        return 2;
+
+    else
+        return 0;
 }
