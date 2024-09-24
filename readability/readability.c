@@ -16,7 +16,7 @@ int main(void){
 
     for(int i = 0; i < length; i++){
 
-        if (punc(sen[i]) == 1){
+        if (punc(sen[i]) == 1){ "!"
             l -= 1;
             s += 1;
             w += 1;
