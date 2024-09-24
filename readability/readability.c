@@ -18,7 +18,7 @@ int main(void){
     for(int i = 0; i < length; i++){
 
         if (punc(sen[i]) == 1){ // "!"
-            l ++;
+            l --;
             s ++;
             w ++;
         }
@@ -48,7 +48,7 @@ int main(void){
 
     float index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
 
-    printf("%f\n%f\n%f\n", l,s,w);
+    //printf("%f\n%f\n%f\n", l,s,w);
 
     if (index >= 16)
         printf("Grade 16+\n");
