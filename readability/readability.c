@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <cmath.h>
 
 int punc(char x);
 
@@ -37,25 +38,20 @@ int main(void){
                 w += 1;
             }
 
-
         }
-
 
     }
 
-    int index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
-
-    string x;
+    float index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
 
     if (index >= 16)
-        x = '16+';
+        printf("Grade 16+\n");
+
+    else if (index < 1)
+        printf("Before Grade 1\n")
 
     else
-        
-
-    printf("Grade: %i\n", index);
-
-    printf("%i\n%i\n%i\n", l,s,w);
+        printf("Grade %i\n", round(index))
 
 
 }
