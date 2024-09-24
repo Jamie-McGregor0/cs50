@@ -16,13 +16,13 @@ int main(void){
 
     for(int i = 0; i < length; i++){
 
-        {
+        if (punc(sen[i]) == 1){
             l -= 1;
             s += 1;
             w += 1;
         }
 
-        else if (sen[i] == ' ')
+        else if (punc(sen[i]) == 2) //
             w += 1;
 
     }
