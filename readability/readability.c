@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-#include <cmath.h>
+#include <math.h>
 
 int punc(char x);
 
@@ -48,10 +48,10 @@ int main(void){
         printf("Grade 16+\n");
 
     else if (index < 1)
-        printf("Before Grade 1\n")
+        printf("Before Grade 1\n");
 
     else
-        printf("Grade %i\n", round(index))
+        printf("Grade %i\n", round(index));
 
 
 }
