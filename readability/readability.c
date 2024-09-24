@@ -43,8 +43,8 @@ int main(void){
     }
 
     float index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
-    printf("%d\n", l / w * 100);
-    printf("%d", s / w * 100);
+    printf("%i,%i,%d\n", l,w, l / w * 100);
+
     printf("%f\n", index);
 
     if (index >= 16)
@@ -57,7 +57,6 @@ int main(void){
         printf("Grade %f\n", index);
 
 
-    printf("%i\n%i\n%i\n%f\n", l,s,w,index);
 
 
 }
