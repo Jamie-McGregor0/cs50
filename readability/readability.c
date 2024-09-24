@@ -53,8 +53,8 @@ int main(void){
 
 }
 
-punc(char x){
-    if (X == '.' || x == '!' || X == '?')
+int punc(char x){
+    if (x == '.' || x == '!' || x == '?')
         return 1;
 
     else if (x == ',')
