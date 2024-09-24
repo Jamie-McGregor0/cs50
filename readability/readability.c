@@ -45,7 +45,13 @@ int main(void){
 
     int index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
 
+    string x;
 
+    if (index >= 16)
+        x = '16+';
+
+    else
+        
 
     printf("Grade: %i\n", index);
 
