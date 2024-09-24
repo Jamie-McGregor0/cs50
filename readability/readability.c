@@ -51,7 +51,7 @@ int main(void){
         printf("Before Grade 1\n");
 
     else
-        printf("Grade %f\n", round(index));
+        printf("Grade %i\n", (int)round(index));
 
 
 }
