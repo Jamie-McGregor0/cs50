@@ -28,10 +28,10 @@ int main(void){
             w ++;
         }
 
-       // else if (punc(sen[i]) == 3){ // '\''
-           // l --;
-           // w ++;
-        //}
+        else if (punc(sen[i]) == 3){ // '\''
+           l --;
+        }
+
         else if (punc(sen[i]) == 4){ // ' '
 
             if (punc(sen[i-1]) == 1 || punc(sen[i-1]) == 2) // "! "
@@ -69,8 +69,8 @@ int punc(char x){
     else if (x == ',')
         return 2;
 
-    //else if (x == '\'')
-        //return 3;
+    else if (x == '\'')
+        return 3;
 
     else if (x == ' ')
         return 4;
