@@ -42,7 +42,7 @@ int main(void){
 
     }
 
-    float index = 0.0588 * (l / w * 100) - 0.296 * (s / w * 100) - 15.8;
+    float index = 0.0588 * (float)(l / w * 100) - 0.296 * (float)(s / w * 100) - 15.8;
     printf("%i,%i,%d\n", l,w, l / w * 100);
 
     printf("%f\n", index);
