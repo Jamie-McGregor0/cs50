@@ -22,8 +22,20 @@ int main(void){
             w += 1;
         }
 
-        else if (punc(sen[i]) == 2) //
+        else if (punc(sen[i]) == 2){ // ','
+            l -= 1;
             w += 1;
+        }
+
+        else if (punc(sen[i]){ // ' '
+
+            if (punc(sen[i-1]) == 1 || punc(sen[i-1] == 2){ //"! "
+                l -= 1
+            }
+
+
+        }
+
 
     }
 
