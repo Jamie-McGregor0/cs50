@@ -28,9 +28,10 @@ int main(void){
             w ++;
         }
 
-        else if (punc(sen[i]) == 3) // '\''
+        else if (punc(sen[i]) == 3){ // '\''
             l --;
-
+            w ++;
+        }
         else if (punc(sen[i]) == 4){ // ' '
 
             if (punc(sen[i-1]) == 1 || punc(sen[i-1]) == 2) // "! "
