@@ -29,8 +29,12 @@ int main(void){
 
         else if (punc(sen[i]){ // ' '
 
-            if (punc(sen[i-1]) == 1 || punc(sen[i-1] == 2){ //"! "
-                l -= 1
+            if (punc(sen[i-1]) == 1 || punc(sen[i-1] == 2) //"! "
+                l -= 1;
+
+            else{ // "A B"
+                l -= 1;
+                w += 1;
             }
 
 
