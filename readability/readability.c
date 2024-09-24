@@ -14,7 +14,7 @@ int main(void){
 
     for(int i = 0; i < length; i++){
 
-        if (sen[i] == '.' || sen[i] == '!' || sen[i] == '?'){
+        {
             l -= 1;
             s += 1;
             w += 1;
@@ -33,4 +33,8 @@ int main(void){
     printf("%i\n%i\n%i\n", l,s,w);
 
 
+}
+
+punc(string [i]){
+    if (sen[i] == '.' || sen[i] == '!' || sen[i] == '?')
 }
