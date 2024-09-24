@@ -3,7 +3,9 @@
 
 int main(void){
 
-    
+    string sen = get_string();
+
+    printf("%s\n", sen);
 
 
 
