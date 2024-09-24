@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int punc(string [i]);
+int punc(char x);
 
 int main(void){
 
@@ -37,11 +37,11 @@ int main(void){
 
 }
 
-punc(string [i]){
-    if (sen[i] == '.' || sen[i] == '!' || sen[i] == '?')
+punc(char x){
+    if (X == '.' || x == '!' || X == '?')
         return 1;
 
-    else if (sen[i] == ',')
+    else if (x == ',')
         return 2;
 
     else
