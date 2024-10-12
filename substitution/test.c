@@ -11,13 +11,15 @@ int main(void){
 
     string plain = get_string("plaintext: ");
 
+    string cipher[strlen(plain)];
+
     for(int i = 0; i < strlen(plain); i++){
 
         for(int j = 0; j < strlen(alphabet); j++){
 
             if(isalpha(plain[i])){
-                if(tolower(plain [i]) == tolower(alphabet[j])){
-                    plain[i] = key[j];
+                if(tolower(plain[i]) == tolower(alphabet[j])){
+                    cipher[i] = plain[j];
                 }
             }
         }
@@ -25,7 +27,7 @@ int main(void){
     }
 
 
-    printf("ciphertext: %s\n", plain);
+    printf("ciphertext: %s\n", cipher);
 
 
 
