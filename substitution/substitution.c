@@ -23,11 +23,13 @@ int main(int argc, string argv[]){
 
     for(int i = 0; i < strlen(plain); i++){
 
-        for(int j = 0; j < 26; j++){
+        for(int j = 0; j < strlen(alphabet); j++){
 
-            if(isalpha(plain[i]))
-                plain[i] = key[j];
-
+            if(isalpha(plain[i])){
+                if(tolower(plain [i]) == tolower(alphabet[j])){
+                    plain[i] = key[j];
+                }
+            }
         }
 
     }
