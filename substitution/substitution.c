@@ -19,6 +19,16 @@ int main(int argc, string argv[]){
         }
     }
 
+    int check[strlen(alphabet)];
+
+    for(int i = 0; i < strlen(key); i++){
+        
+
+
+    }
+
+
+
     string plain = get_string("plaintext: ");
     char cipher[strlen(plain)];
     strcpy(cipher, plain);
