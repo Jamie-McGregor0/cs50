@@ -11,7 +11,7 @@ int main(void){
 
     string plain = get_string("plaintext: ");
 
-    string cipher[strlen(plain)];
+    string cipher = plain;
 
     for(int i = 0; i < strlen(plain); i++){
 
