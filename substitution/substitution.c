@@ -18,7 +18,19 @@ int main(int argc, string argv[]){
         }
     }
 
-    
+    string plain = get_string("plaintext: ");
+
+    for(int i = 0; i < strlen(plain); i++){
+
+        for(int j = 0; j < 26; j++){
+
+            if(isalpha(plain[i])){
+                if(plain[i] == )
+            }
+
+        }
+
+    }
 
 
 
