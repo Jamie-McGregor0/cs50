@@ -5,13 +5,14 @@
 
 int main(int argc, string argv[]){
 
+    int len = strlen(argv);
     //for(int i = 1; i < strlen(argv[-1]); i++){
 
        // if(isalpha(argv[i]))
 
   //  }
 
-    printf("%s\n",argv[strlen(argv) - 1]);
+    printf("%s\n",argv[len - 1]);
 
 
 }
