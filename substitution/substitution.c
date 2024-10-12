@@ -11,14 +11,15 @@ int main(int argc, string argv[]){
     for(int i = 0; i < strlen(key); i++){
 
         if(isalpha(key[i]) == 0){
-            return 1;
+
             check += 1;
+            return 1;
         }
     }
 
     if(check != 0)
         printf("Usage: %s key\n", argv[0]);
 
-    
+
 
 }
