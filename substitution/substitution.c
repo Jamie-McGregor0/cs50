@@ -25,7 +25,8 @@ int main(int argc, string argv[]){
         for(int j = 0; j < 26; j++){
 
             if(isalpha(plain[i])){
-                if(plain[i] == )
+                if(tolower(plain[i]) == tolower(key[j]))
+                    plain[i] = key[i];
             }
 
         }
@@ -33,7 +34,7 @@ int main(int argc, string argv[]){
     }
 
 
-
+    printf("ciphertext: %s\n", plain);
 
 
 
