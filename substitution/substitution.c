@@ -34,7 +34,7 @@ int main(int argc, string argv[]){
     }
 
 
-    printf("ciphertext: %s\n", plain);
+    printf("ciphertext: %s\n%s\n", plain, key);
 
 
 
