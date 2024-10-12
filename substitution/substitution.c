@@ -13,7 +13,7 @@ int main(int argc, string argv[]){
         if(isalpha(key[i]) == 0){
 
             check += 1;
-            return 1;
+            
         }
     }
 
