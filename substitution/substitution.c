@@ -11,7 +11,7 @@ int main(int argc, string argv[]){
 
   //  }
 
-    printf("%s\n",argv.rbegin());
+    printf("%s\n",argv[strlen(argv) - 1]);
 
 
 }
