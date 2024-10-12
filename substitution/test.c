@@ -7,7 +7,7 @@ int main(void){
 
     string alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-    string key = "bcdefghijklmnopqrstuvwxyza";
+    string key = "NQXPOMAFTRHLZGECYJIUWSKDVB";
 
     string plain = get_string("plaintext: ");
 

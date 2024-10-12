@@ -28,12 +28,11 @@ int main(int argc, string argv[]){
         for(int j = 0; j < strlen(alphabet); j++){
 
             if(isalpha(plain[i])){
-                if(tolower(plain [i]) == tolower(alphabet[j])){
+                if(tolower(plain [i]) == tolower(alphabet[j]))
                     cipher[i] = key[j];
-                }
+                
             }
         }
-
     }
 
 
