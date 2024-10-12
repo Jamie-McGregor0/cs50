@@ -24,11 +24,9 @@ int main(int argc, string argv[]){
 
         for(int j = 0; j < 26; j++){
 
-            if(isalpha(plain[i])){
-                if(tolower(plain[i]) == tolower(key[j]))
-                    plain[i] = key[j];
-            }
-
+            if(isalpha(plain[i]))
+                plain[i] = key[j];
+            
         }
 
     }
