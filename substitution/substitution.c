@@ -5,12 +5,12 @@
 
 int main(int argc, string argv[]){
 
-    string 
+    string key = argv[argc - 1];
 
-    for(int i = 0; i < strlen(argv[argc - 1]); i++){
+    for(int i = 0; i < strlen(key); i++){
 
-        if(isalpha(argv[i]))
-
+        if(isalpha(key[i]) == 0)
+            return 1;
     }
 
 
