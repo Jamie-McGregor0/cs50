@@ -26,7 +26,7 @@ int main(int argc, string argv[]){
 
             if(isalpha(plain[i])){
                 if(tolower(plain[i]) == tolower(key[j]))
-                    plain[i] = key[i];
+                    plain[i] = key[j];
             }
 
         }
