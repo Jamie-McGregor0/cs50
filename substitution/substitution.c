@@ -5,13 +5,13 @@
 
 int main(int argc, string argv[]){
 
-    for(int i = 1; i < strlen(argv[-1]); i++){
+    //for(int i = 1; i < strlen(argv[-1]); i++){
 
-        if(isalpha(argv[i]))
+       // if(isalpha(argv[i]))
 
-    }
+  //  }
 
-
+    printf(argv[1]);
 
 
 }
