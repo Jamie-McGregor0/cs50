@@ -20,6 +20,8 @@ int main(int argc, string argv[]){
     }
 
     string plain = get_string("plaintext: ");
+    char cipher[strlen(plain)];
+    strcpy(cipher, plain);
 
     for(int i = 0; i < strlen(plain); i++){
 
@@ -27,7 +29,7 @@ int main(int argc, string argv[]){
 
             if(isalpha(plain[i])){
                 if(tolower(plain [i]) == tolower(alphabet[j])){
-                    plain[i] = key[j];
+                    cipher[i] = key[j];
                 }
             }
         }
@@ -35,7 +37,7 @@ int main(int argc, string argv[]){
     }
 
 
-    printf("ciphertext: %s\n%s\n", plain, key);
+    printf("ciphertext: %s\n", cipher);
 
 
 
