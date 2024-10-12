@@ -7,6 +7,9 @@ int main(int argc, string argv[]){
 
     string key = argv[argc - 1];
 
+    if(strlen(key) != 26 || argc != 2)
+        return 1;
+
     for(int i = 0; i < strlen(key); i++){
 
         if(isalpha(key[i]) == 0){
@@ -16,6 +19,9 @@ int main(int argc, string argv[]){
     }
 
     
+
+
+
 
 
 
