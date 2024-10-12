@@ -24,7 +24,7 @@ int main(int argc, string argv[]){
     for(int i = 0; i < strlen(key); i++){
         for(int j = 0; j < strlen(alphabet); j++){
 
-            if(key[i] == alphabet[j])
+            if(tolower(key[i]) == alphabet[j])
                 check[j] += 1;
         }
     }
