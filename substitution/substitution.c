@@ -28,16 +28,16 @@ int main(int argc, string argv[]){
         for(int j = 0; j < strlen(alphabet); j++){
 
             if(isalpha(plain[i])){
-                if(tolower(plain [i]) == tolower(alphabet[j]))
-                    cipher[i] = key[j];
-                
+                if(tolower(plain[i]) == tolower(alphabet[j])){
+                    if(islower(plain[i]))
+                        cipher[i] = tolower(key[j]);
+                    else
+                        cipher[i] = key[j];
+                }
             }
         }
     }
 
-
     printf("ciphertext: %s\n", cipher);
-
-
 
 }
