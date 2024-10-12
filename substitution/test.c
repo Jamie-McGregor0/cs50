@@ -11,7 +11,7 @@ int main(void){
 
     string plain = get_string("plaintext: ");
 
-    string cipher[25];
+    char cipher[strlen(plain)];
 
     strcpy(cipher, plain);
 
