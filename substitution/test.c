@@ -3,10 +3,30 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int argc, string argv[]){
+int main(void){
 
     string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    string key = argv[argc - 1];
 
-…
+    string key = "bcdefghijklmnopqrstuvwxyza";
+
+    string plain = get_string("plaintext: ");
+
+    for(int i = 0; i < strlen(plain); i++){
+
+        for(int j = 0; j < strlen(alphabet); j++){
+
+            if(isalpha(plain[i])){
+                if(tolower(plain [i]) == tolower(alphabet[j])){
+                    plain[i] = key[j];
+                }
+            }
+        }
+
+    }
+
+
+    printf("ciphertext: %s\n", plain);
+
+
+
 }
