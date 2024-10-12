@@ -19,7 +19,7 @@ int main(void){
 
             if(isalpha(plain[i])){
                 if(tolower(plain[i]) == tolower(alphabet[j])){
-                    cipher[i] = plain[j];
+                    cipher[i] = key[j];
                 }
             }
         }
