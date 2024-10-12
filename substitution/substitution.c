@@ -5,6 +5,7 @@
 
 int main(int argc, string argv[]){
 
+    string alphabet = "ab"
     string key = argv[argc - 1];
 
     if(strlen(key) != 26 || argc != 2)
@@ -26,7 +27,7 @@ int main(int argc, string argv[]){
 
             if(isalpha(plain[i]))
                 plain[i] = key[j];
-            
+
         }
 
     }
