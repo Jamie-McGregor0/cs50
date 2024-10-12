@@ -5,7 +5,7 @@
 
 int main(int argc, string argv[]){
 
-    string alphabet = "ab"
+    string alphabet = "abcdefghijklmnopqrstuvwxyz";
     string key = argv[argc - 1];
 
     if(strlen(key) != 26 || argc != 2)
