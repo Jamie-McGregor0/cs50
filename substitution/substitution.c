@@ -5,7 +5,12 @@
 
 int main(int argc, string argv[]){
 
-    if(argv[])
+    for(int i = 1; i < strlen(argv); i++){
+
+        if(isalpha(argv[i]))
+            
+    }
+
 
 
 
