@@ -3,7 +3,7 @@
 
 int main(int argc, string argv[]){
 
-    string key = get_string();
+    if(argv[])
 
 
 
