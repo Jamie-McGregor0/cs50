@@ -32,7 +32,7 @@ int main(int argc, string argv[]){
                     if(islower(plain[i]))
                         cipher[i] = tolower(key[j]);
                     else
-                        cipher[i] = key[j];
+                        cipher[i] = toupper(key[j]);
                 }
             }
         }
