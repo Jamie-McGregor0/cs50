@@ -19,7 +19,7 @@ int main(int argc, string argv[]){
         }
     }
 
-    int check[strlen(alphabet)];
+    int check[strlen(alphabet)] = {};
 
     for(int i = 0; i < strlen(key); i++){
         for(int j = 0; j < strlen(alphabet); j++){
@@ -27,10 +27,12 @@ int main(int argc, string argv[]){
             if(key[i] == alphabet[j])
                 check[j] += 1;
         }
-
-
     }
 
+    for(int i = 0; i < strlen(alphabet); i++){
+        if(check[i] > 1)
+            return 1;
+    }
 
 
     string plain = get_string("plaintext: ");
