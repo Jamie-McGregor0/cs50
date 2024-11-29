@@ -151,11 +151,11 @@ void sort_pairs(void)
 {
     // TODO
     int d_order[];
-    for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
+    for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
     {
-        for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
+        for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
         {
-            for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
+            for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
             {
                 int max_s = 0;
                 if (pairs[i][j] > max_s)
@@ -164,7 +164,10 @@ void sort_pairs(void)
                 }
             }
 
-
+            if (max_s < d_order[k] && k != 0)
+            {
+                
+            }
 
 
         }
