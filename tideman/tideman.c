@@ -150,6 +150,9 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+    int rk[];
+    for (int i = 0; i < candidate_count; i ++)
+
     return;
 }
 
