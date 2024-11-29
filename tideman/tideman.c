@@ -203,7 +203,20 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
+    string ranking[];
+    for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
+    {
+        for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
+        {
+            for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
+            {
+                if (pairs[i][j] == d_order)
+                {
 
+                }
+            }
+        }
+    }
 
     return;
 }
