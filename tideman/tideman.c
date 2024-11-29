@@ -164,9 +164,9 @@ void sort_pairs(void)
                 }
             }
 
-            if (max_s < d_order[k] && k != 0)
+            if (max_s < d_order[k - 1] || k != 0)
             {
-                
+                d_order[K]
             }
 
 
