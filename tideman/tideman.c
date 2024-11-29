@@ -151,6 +151,37 @@ void sort_pairs(void)
 {
     // TODO
     int d_order[];
+
+    for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
+    {
+        for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
+        {
+            for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
+            {
+                for (int l = 0; l < MAX * (MAX - 1) / 2; l ++)
+                {
+                    if (i != k || j != l)
+                    {
+                        if (pairs[i][j] == pairs[k][l])
+                        {
+                            
+                        }
+                    }
+
+
+
+
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
     for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
     {
         for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
@@ -180,7 +211,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    
+
 
     return;
 }
