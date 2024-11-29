@@ -151,9 +151,9 @@ void sort_pairs(void)
 {
     // TODO
     int d_order[];
-    for (int i = 0; i < candidate_count; i ++)
+    for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
     {
-        for (int j = 0; j < candidate_count; j ++)
+        for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
         {
             if ()
         }
