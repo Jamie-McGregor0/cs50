@@ -164,6 +164,9 @@ void sort_pairs(void)
                 }
             }
 
+
+
+
         }
 
         d_order[i] = max_s;
