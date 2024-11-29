@@ -156,12 +156,14 @@ void sort_pairs(void)
         for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
         {
             int max_s = 0;
-            if (pairs[][] > max_s)
+            if (pairs[i][j] > max_s)
             {
-                max_s = pairs[][]
+                max_s = pairs[i][j]
             }
 
         }
+
+        d_order[i] = max_s;
 
     }
 
