@@ -139,7 +139,7 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[j][i])
             {
-                pair[i][j] = preferences[i][j];
+                pairs[i][j] = preferences[i][j];
             }
         }
     }
@@ -150,12 +150,12 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    int rk[];
+    int d_order[];
     for (int i = 0; i < candidate_count; i ++)
     {
         for (int j = 0; j < candidate_count; j ++)
         {
-
+            if ()
         }
     }
 
