@@ -1,11 +1,11 @@
-sort1 uses: Merge
+sort1 uses: Bubble sort
 
-How do you know?: im smart
+How do you know?: quickest
+submit50 cs50/problems/2024/x/sort
+sort2 uses: Merge
 
-sort2 uses: Selection
+How do you know?: only option left
 
-How do you know?: im smart
+sort3 uses: Selection sort
 
-sort3 uses: Bubble
-
-How do you know?: im smart
+How do you know?: most time used
