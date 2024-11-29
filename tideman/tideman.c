@@ -160,27 +160,19 @@ void sort_pairs(void)
             {
                 for (int l = 0; l < MAX * (MAX - 1) / 2; l ++)
                 {
+                    int same = pairs[i][j];
                     if (i != k || j != l)
                     {
-                        if (pairs[i][j] == pairs[k][l])
+                        if (pairs[k][l] == same)
                         {
-                            
+                            pairs[k][l] == 0;
+                            pairs[i][j] == 0;
                         }
                     }
-
-
-
-
                 }
             }
         }
     }
-
-
-
-
-
-
 
     for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
     {
