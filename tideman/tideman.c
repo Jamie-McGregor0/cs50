@@ -124,7 +124,7 @@ void record_preferences(int ranks[])
         {
             for (int k = 0; k < candidate_count; k ++)
             {
-                if (strcmp(ranks[k], candidates))
+                if (strcmp(ranks[k], candidates[i]))
                 preferences[i][j] += 1;
             }
         }
