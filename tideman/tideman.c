@@ -183,6 +183,10 @@ void sort_pairs(void)
                                     x = pairs[i].winner;
                                     y = pairs[i].loser;
 
+                                    pairs[i].winner = pairs[j].winner;
+                                    pairs[j].winner = x;
+                                    pairs[i].loser = pairs[j].loser;
+                                    pairs[j].loser = y;
                                 }
                             }
                         }
