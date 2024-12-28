@@ -163,23 +163,15 @@ void sort_pairs(void)
     // TODO
     int d_order[];
 
-    for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
+    for (int i = 0; i < pair_count; i ++)
     {
-        for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
+        for (int j = 0; j < pair_count; j ++)
         {
-            for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
+            for (int k = 0; k < candidate_count; k ++)
             {
-                for (int l = 0; l < MAX * (MAX - 1) / 2; l ++)
+                for (int l = 0; l < candidate_count; l ++)
                 {
-                    int same = pairs[i][j];
-                    if (i != k || j != l)
-                    {
-                        if (pairs[k][l] == same)
-                        {
-                            pairs[k][l] == 0;
-                            pairs[i][j] == 0;
-                        }
-                    }
+                    if ()
                 }
             }
         }
