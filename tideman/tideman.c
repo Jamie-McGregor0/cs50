@@ -171,7 +171,13 @@ void sort_pairs(void)
             {
                 for (int l = 0; l < candidate_count; l ++)
                 {
-                    if (pairs[i].winner)
+                    if (strcmp(pairs[i].winner, candidates[k]) && strcmp(pairs[i].loser, candidates[l])
+                    {
+                        if (preferences[k][l] < preferences[m][n])
+                        {
+                            swap()
+                        }
+                    }
                 }
             }
         }
