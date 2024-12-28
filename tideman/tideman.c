@@ -161,7 +161,8 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    int d_order[];
+    string x;
+    string y;
 
     for (int i = 0; i < pair_count; i ++)
     {
@@ -171,18 +172,25 @@ void sort_pairs(void)
             {
                 for (int l = 0; l < candidate_count; l ++)
                 {
-                    if (strcmp(pairs[i].winner, candidates[k]) && strcmp(pairs[i].loser, candidates[l])
+                    for (int m = 0; m < candidate_count; m ++)
                     {
-                        if (preferences[k][l] < preferences[m][n])
+                        for (int n = 0; n < candidate_count; n ++)
                         {
-                            swap()
+                            if (strcmp(pairs[i].winner, candidates[k]) && strcmp(pairs[i].loser, candidates[l] && strcmp(pairs[j].winner, candidates[m]) && strcmp(pairs[j].loser, candidates[n]))
+                            {
+                                if (preferences[k][l] < preferences[m][n])
+                                {
+                                    x = pairs[i].winner;
+                                    y = pairs[i].loser;
+
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
-
     for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
     {
         for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
