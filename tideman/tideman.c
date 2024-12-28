@@ -122,16 +122,18 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < candidate_count; j ++)
         {
-            for (int k = 0; k < candidate_count; k ++)
+            for (int k = 0; k < candidate_count - 1; k ++)
             {
-                if (candidates[i], strcmp(ranks[k]) && strcmp(candidates[j], ranks[k + 1]))
-                    preferences[i][j] += 1;
+                for (int l = k + 1; l < candidate_count; l ++)
+                {
+                    if (candidates[i], strcmp(ranks[k]) && strcmp(candidates[j], ranks[l]))
+                        preferences[i][j] += 1;
+                }
             }
         }
-    }
 
     return;
-}
+    }
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
