@@ -243,9 +243,17 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    for (int i = 0; i < MAX * (MAX - 1) / 2; i ++)
+    for (int i = 0; i < pair_couont; i ++)
     {
-        printf("",)
+        bool af = true;
+
+        for (int j = 0; j < pair_couont; j ++)
+        {
+            if (af)
+            {
+                prtinf("%s", candidates[i])
+            }
+        }
     }
 
     return;
