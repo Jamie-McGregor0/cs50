@@ -217,7 +217,7 @@ void lock_pairs(void)
                {
                     for (int m = 0; m < candidate_count; m ++)
                     {
-                        if (!locked[l][m])
+                        if (!locked[m][l])
                     }
                }
             }
