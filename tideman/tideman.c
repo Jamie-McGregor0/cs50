@@ -230,7 +230,7 @@ void lock_pairs(void)
                     {
                         if (pairs[i].winner == j && pairs[i].loser == k)
                         {
-                            locked[j][k] == true;
+                            locked[j][k] = true;
                         }
                     }
                }
@@ -245,15 +245,15 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    for (int i = 0; i < pair_couont; i ++)
+    for (int i = 0; i < pair_count; i ++)
     {
         bool af = true;
 
-        for (int j = 0; j < pair_couont; j ++)
+        for (int j = 0; j < pair_count; j ++)
         {
             if (af)
             {
-                prtinf("%s", candidates[i])
+                printf("%s", candidates[i]);
             }
         }
     }
