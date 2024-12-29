@@ -205,6 +205,8 @@ void lock_pairs(void)
 {
     // TODO
 
+    
+
     for (int i = 0; i < pair_couont; i ++)
     {
         for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
