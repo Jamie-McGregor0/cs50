@@ -226,7 +226,7 @@ void lock_pairs(void)
 
                     if (!af)
                     {
-                        
+                        if ()
                     }
                }
             }
