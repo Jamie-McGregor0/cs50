@@ -161,6 +161,7 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+
     string x;
     string y;
 
@@ -203,7 +204,6 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-    string ranking[candidate_count];
 
     for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
     {
