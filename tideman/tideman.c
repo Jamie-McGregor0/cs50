@@ -205,13 +205,13 @@ void lock_pairs(void)
 {
     // TODO
 
-    
+
 
     for (int i = 0; i < pair_couont; i ++)
     {
-        for (int j = 0; j < MAX * (MAX - 1) / 2; j ++)
+        for (int j = 0; j < candidate_count; j ++)
         {
-            for (int k = 0; k < MAX * (MAX - 1) / 2; k ++)
+            for (int k = 0; k < candidate_count; k ++)
             {
                for (int l = 0; l < ; l ++)
                {
