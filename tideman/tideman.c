@@ -132,9 +132,9 @@ void record_preferences(int ranks[])
                 }
             }
         }
-
-    return;
     }
+    return;
+}
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
@@ -148,8 +148,8 @@ void add_pairs(void)
             {
                 if (preferences[i][j] > preferences[j][i])
                 {
-                    pairs[k].winner = candidates[i];
-                    pairs[k].loser = candidates[j];
+                    pairs[k].winner = i;
+                    pairs[k].loser = j;
 
                     pair_count += 1;
                 }
