@@ -162,8 +162,8 @@ void sort_pairs(void)
 {
     // TODO
 
-    string x;
-    string y;
+    int x;
+    int y;
 
     for (int i = 0; i < pair_count; i ++)
     {
@@ -177,7 +177,7 @@ void sort_pairs(void)
                     {
                         for (int n = 0; n < candidate_count; n ++)
                         {
-                            if (strcmp(pairs[i].winner, candidates[k]) && strcmp(pairs[i].loser, candidates[l] && strcmp(pairs[j].winner, candidates[m]) && strcmp(pairs[j].loser, candidates[n]))
+                            if (pairs[i].winner == k && pairs[i].loser == l && pairs[j].winner == m && pairs[j].loser == n)
                             {
                                 if (preferences[k][l] < preferences[m][n])
                                 {
