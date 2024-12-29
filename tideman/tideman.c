@@ -251,11 +251,16 @@ void print_winner(void)
 
         for (int j = 0; j < pair_count; j ++)
         {
-            if (af)
+            if (locked[i][j])
+            {
+                af = false;
+            }
+        }
+
+        if (af)
             {
                 printf("%s", candidates[i]);
             }
-        }
     }
 
     return;
