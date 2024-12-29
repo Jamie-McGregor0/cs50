@@ -261,7 +261,7 @@ void print_winner(void)
 
         if (is_source)
             {
-                printf("%s", candidates[i]);
+                printf("%s\n", candidates[i]);
                  return;
             }
     }
