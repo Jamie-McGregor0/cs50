@@ -208,7 +208,7 @@ void lock_pairs(void)
     // TODO
 
 
-    for (int i = 0; i < pair_couont; i ++)
+    for (int i = 0; i < pair_count; i ++)
     {
         for (int j = 0; j < candidate_count; j ++)
         {
