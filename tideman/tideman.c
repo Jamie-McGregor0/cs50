@@ -223,6 +223,7 @@ void lock_pairs(void)
                         if (locked[l][m])
                         {
                             af = false;
+                            break;
                         }
                     }
 
@@ -247,21 +248,22 @@ void print_winner(void)
     // TODO
     for (int i = 0; i < pair_count; i ++)
     {
-        bool af = true;
+        bool is_source = true;
 
         for (int j = 0; j < pair_count; j ++)
         {
             if (locked[i][j])
             {
-                af = false;
+                is_source = false;
+                break;
             }
         }
 
-        if (af)
+        if (is_source)
             {
                 printf("%s", candidates[i]);
+                 return;
             }
     }
 
-    return;
 }
