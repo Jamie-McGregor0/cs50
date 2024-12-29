@@ -206,7 +206,6 @@ void lock_pairs(void)
     // TODO
 
 
-
     for (int i = 0; i < pair_couont; i ++)
     {
         for (int j = 0; j < candidate_count; j ++)
@@ -215,9 +214,19 @@ void lock_pairs(void)
             {
                for (int l = 0; l < candidate_count; l ++)
                {
+                    bool af = true;
+
                     for (int m = 0; m < candidate_count; m ++)
                     {
-                        if (!locked[l][m])
+                        if (locked[l][m])
+                        {
+                            af = false;
+                        }
+                    }
+
+                    if (!af)
+                    {
+                        
                     }
                }
             }
