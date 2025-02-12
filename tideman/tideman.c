@@ -32,6 +32,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool creates_cycle(int winner, int loser);
 
 int main(int argc, string argv[])
 {
@@ -161,42 +162,18 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-
-    int x;
-    int y;
-
     for (int i = 0; i < pair_count; i ++)
     {
         for (int j = 0; j < pair_count; j ++)
         {
-            for (int k = 0; k < candidate_count; k ++)
+            if (preferences[pairs[j].winner][pairs[j].loser] < preferences[pairs[j + 1].winner][pairs[j + 1].loser])
             {
-                for (int l = 0; l < candidate_count; l ++)
-                {
-                    for (int m = 0; m < candidate_count; m ++)
-                    {
-                        for (int n = 0; n < candidate_count; n ++)
-                        {
-                            if (pairs[i].winner == k && pairs[i].loser == l && pairs[j].winner == m && pairs[j].loser == n)
-                            {
-                                if (preferences[k][l] < preferences[m][n])
-                                {
-                                    x = pairs[i].winner;
-                                    y = pairs[i].loser;
-
-                                    pairs[i].winner = pairs[j].winner;
-                                    pairs[j].winner = x;
-                                    pairs[i].loser = pairs[j].loser;
-                                    pairs[j].loser = y;
-                                }
-                            }
-                        }
-                    }
-                }
+                pair temp = pairs[j];
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = temp;
             }
         }
     }
-
     return;
 }
 
@@ -204,39 +181,13 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
-
-
     for (int i = 0; i < pair_count; i ++)
     {
-        for (int j = 0; j < candidate_count; j ++)
+        if (!creates_cycle(pairs[i].winner, pairs[i].loser))
         {
-            for (int k = 0; k < candidate_count; k ++)
-            {
-               for (int l = 0; l < candidate_count; l ++)
-               {
-                    bool af = true;
-
-                    for (int m = 0; m < candidate_count; m ++)
-                    {
-                        if (locked[l][m])
-                        {
-                            af = false;
-                            break;
-                        }
-                    }
-
-                    if (!af)
-                    {
-                        if (pairs[i].winner == j && pairs[i].loser == k)
-                        {
-                            locked[j][k] = true;
-                        }
-                    }
-               }
-            }
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
-
     return;
 }
 
@@ -244,24 +195,42 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    for (int i = 0; i < pair_count; i ++)
+    for (int i = 0; i < candidate_count; i ++)
     {
         bool is_source = true;
 
-        for (int j = 0; j < pair_count; j ++)
+        for (int j = 0; j < candidate_count; j ++)
         {
-            if (locked[i][j])
+            if (locked[j][i])
             {
                 is_source = false;
-                break;
             }
         }
 
         if (is_source)
             {
                 printf("%s\n", candidates[i]);
-                 return;
+                return;
             }
     }
 
 }
+
+bool creates_cycle(int winner, int loser)
+{
+    if (winner == loser)
+    {
+        return true;
+    }
+
+    for (int i = 0; i < candidate_count; i ++)
+    {
+        if (locked[loser][i] && creates_cycle(winner, i))
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+
