@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     uint8_t header[HEADER_SIZE];
     while (fread(&header, HEADER_SIZE, 1, argv[1]) != 0)
     {
-        
+        fwrite(&header, HEADER_SIZE, 1, argv[2]);
     }
 
     // TODO: Read samples from input file and write updated data to output file
