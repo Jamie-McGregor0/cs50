@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 #define block_size 512
+#define name_length 8
 
 int main(int argc, char *argv[])
 {
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
     uint8_t buffer[block_size];
     FILE *current_file = NULL;
     int jpg_count = 0;
-    char img_name;
+    char *img_name[name_length];
 
     while(fread(buffer, 1, 512, card) == block_size){
         for(int i = 0; i < block_size - 3; i ++){
@@ -51,6 +52,6 @@ int main(int argc, char *argv[])
         fcolse(current_file);
     }
 
-    fclose(card;)
+    fclose(card);
 
 }
