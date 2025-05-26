@@ -37,15 +37,14 @@ int main(int argc, char *argv[])
                 sprintf(img_name, "%03i.jpg", jpg_count);
 
                 current_file = fopen(img_name, "w");
-                fwrite(buffer + i, 1, block_size - i, output_file);
+                fwrite(buffer + i, 1, block_size - i, current_file);
 
-
-            else if(current_file != NULL){
-                fwrite(buffer, 1, block_size, current_file);
             }
         }
 
-        }
+        if(current_file != NULL){
+                fwrite(buffer, 1, block_size, current_file);
+            }
     }
 
     if(current_file != NULL){
