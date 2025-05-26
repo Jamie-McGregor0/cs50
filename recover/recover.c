@@ -23,7 +23,9 @@ int main(int argc, char *argv[])
             FILE *img;
             sprintf(img, "%03i.jpg", i);
 
-            
+            FILE *img0 = fopen(card, "w");
+
+            fwrite(img, 1,  )
 
         }
     }
