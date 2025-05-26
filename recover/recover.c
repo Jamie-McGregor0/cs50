@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
                 fwrite(buffer + i, 1, block_size - i, output_file);
 
 
-            else{
-                fclose(img);
+            else if(current_file != NULL){
+                fwrite(buffer, 1, block_size, current_file);
             }
 
 
