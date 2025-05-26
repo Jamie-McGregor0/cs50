@@ -40,6 +40,8 @@ int main(int argc, char *argv[])
                 current_file = fopen(img_name, "w");
                 fwrite(buffer + i, 1, block_size - i, current_file);
 
+                break;
+
             }
         }
 
