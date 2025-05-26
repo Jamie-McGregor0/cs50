@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+#define block_size 512
+
 int main(int argc, char *argv[])
 {
     if(argc != 2){
@@ -15,9 +17,9 @@ int main(int argc, char *argv[])
         return 2;
     }
 
-    uint8_t buffer[512];
-    i = 0;
-    jpg_count = 0;
+    uint8_t buffer[block_size];
+    int i = 0;
+    int jpg_count = 0;
     char img_name;
 
     while(fread(buffer, 1, 512, card) == 512){
