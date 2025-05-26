@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     while(fread(buffer, 1, 512, card) == block_size){
         for(int i = 0; i < block_size - 3; i ++){
 
+            int new = 0;
+
             if(buffer[i] == 0xff && buffer[i+1] == 0xd8 && buffer[i+2] == 0xff && (buffer[i+3] & 0xf0) == 0xe0){
 
                 if(current_file != NULL){
@@ -40,12 +42,14 @@ int main(int argc, char *argv[])
                 current_file = fopen(img_name, "w");
                 fwrite(buffer + i, 1, block_size - i, current_file);
 
+                new = 1;
+
                 break;
 
             }
         }
 
-        if(current_file != NULL){
+        if(new == 0 && current_file != NULL){
                 fwrite(buffer, 1, block_size, current_file);
             }
     }
