@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
             if(i == 0){
                 FILE *img;
                 sprintf(img, "%03i.jpg", i);
-                
+                FILE *card = fopen(argv[1], "w");
+                fwrite(img, 1, 1, img0);
             }
 
             else{
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
 
 
 
-            fwrite(img, 1, 1, img0);
+
 
         }
     }
