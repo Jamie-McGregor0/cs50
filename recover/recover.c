@@ -24,25 +24,15 @@ int main(int argc, char *argv[])
         if(buffer[i] == 0xff && buffer[i+1] == 0xd8 && buffer[i+2] == 0xff && (buffer[i+3] & 0xf0) == 0xe0){
             if(i == 0){
                 FILE *img0 = fopen(card, "w");
-
-
-
-
             }
 
             else{
-                fclose(card);
-
-
-
+                fclose(img);
             }
 
             FILE *img;
             sprintf(img, "%03i.jpg", i);
-
-
-
-            fwrite(img, 1,  )
+            fwrite(img, 1, 1, img0);
 
         }
     }
