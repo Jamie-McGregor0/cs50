@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
         for(int i = 0; i < block_size - 3; i ++){
 
             if(buffer[i] == 0xff && buffer[i+1] == 0xd8 && buffer[i+2] == 0xff && (buffer[i+3] & 0xf0) == 0xe0){
+
                 if(current_file != NULL){
                     fclose(current_file);
                     current_file = NULL;
