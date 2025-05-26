@@ -9,12 +9,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    if(argv[1] = ""){
+    FILE *card = fopen(argv[1],"r");
+    if(card == NULL){
         printf("No FILE\n");
         return 2;
     }
-
-    FILE *card = fopen(argv[1],"r");
 
     uint8_t buffer[512];
     i = 0;
@@ -27,8 +26,9 @@ int main(int argc, char *argv[])
         if(buffer[i] == 0xff && buffer[i+1] == 0xd8 && buffer[i+2] == 0xff && (buffer[i+3] & 0xf0) == 0xe0){
             if(jpg_count == 0){
                 sprintf(img_name, "%03i.jpg", jpg_count);
-                FILE *card = fopen(argv[1], "w");
-                fwrite(img, 1, 1, img0);
+
+                FILE *output_file = fopen(argv[1], "w");
+                fwrite(buffer, 1, 1, output_file);
             }
 
             else{
