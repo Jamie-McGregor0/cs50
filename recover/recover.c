@@ -17,12 +17,12 @@ int main(int argc, char *argv[])
     FILE *card = fopen(argv[1],"r");
 
     uint8_t buffer[512];
-
     i == 0;
+    char img_name;
 
     while(fread(buffer, 1, 512, card) == 512){
 
-        char img_name[512];
+
         if(buffer[i] == 0xff && buffer[i+1] == 0xd8 && buffer[i+2] == 0xff && (buffer[i+3] & 0xf0) == 0xe0){
             if(i == 0){
 
