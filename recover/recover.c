@@ -23,16 +23,24 @@ int main(int argc, char *argv[])
     while(fread(buffer, 1, 512, card) == 512){
         if(buffer[i] == 0xff && buffer[i+1] == 0xd8 && buffer[i+2] == 0xff && (buffer[i+3] & 0xf0) == 0xe0){
             if(i == 0){
+                FILE *img0 = fopen(card, "w");
 
 
 
 
-                
             }
+
+            else{
+                fclose(card);
+
+
+
+            }
+
             FILE *img;
             sprintf(img, "%03i.jpg", i);
 
-            FILE *img0 = fopen(card, "w");
+
 
             fwrite(img, 1,  )
 
