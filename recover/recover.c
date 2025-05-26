@@ -43,20 +43,15 @@ int main(int argc, char *argv[])
             else if(current_file != NULL){
                 fwrite(buffer, 1, block_size, current_file);
             }
-
-
-
-
         }
-
-
-
-
-
-
 
         }
     }
 
+    if(current_file != NULL){
+        fcolse(current_file);
+    }
+
+    fclose(card;)
 
 }
