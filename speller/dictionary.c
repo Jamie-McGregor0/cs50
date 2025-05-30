@@ -22,7 +22,6 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    for (xxx; )
     return false;
 }
 
