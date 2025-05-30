@@ -26,7 +26,7 @@ unsigned int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    for (; table[hash(*word)])
+    for (; table[hash(*word)]->next != NULL; )
     return false;
 }
 
