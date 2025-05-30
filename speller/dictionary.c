@@ -28,7 +28,7 @@ bool check(const char *word)
     // TODO
     for (node *n = table[hash(word)]; n->next != NULL; n = n->next)
     {
-        if (strcasecmp(n.word, word))
+        if (strcmp(n->word, tolower(word)))
         {
             return true;
         }
