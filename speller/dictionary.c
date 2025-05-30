@@ -41,7 +41,7 @@ bool load(const char *dictionary)
     FILE *dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
-        return;
+        return false;
     }
 
     char word[999];
@@ -52,7 +52,7 @@ bool load(const char *dictionary)
         if (n == NULL)
         {
             fclose(dict);
-            return;
+            return false;
         }
 
         strcpy(n->word, word);
@@ -63,12 +63,7 @@ bool load(const char *dictionary)
     }
 
     fclose(dict);
-
-    else
-    {
-        return false;
-    }
-
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
