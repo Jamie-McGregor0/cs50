@@ -40,10 +40,10 @@ bool load(const char *dictionary)
     // TODO
     FILE *dict = fopen(dictionary, "r");
 
-    for
+    while (fread(dict, 1 ,1 , dictionary) == 1)
         node *n = malloc(sizeof(node));
         strcpy(n->word, dict[i]);
-        
+
 
 
 
