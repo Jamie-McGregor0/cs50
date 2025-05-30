@@ -19,6 +19,9 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+unsigned int dict_size = 0;
+
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -61,6 +64,8 @@ bool load(const char *dictionary)
 
         n->next = table[hash(n->word)];
         table[hash(n->word)] = n;
+
+        dict_size ++;
 
     }
 
