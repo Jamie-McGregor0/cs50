@@ -39,6 +39,8 @@ bool load(const char *dictionary)
     FILE *dict = fopen(dictionary, "r");
     node *tab = malloc(sizeof(table));
 
+    while (fread())
+
     return false;
 }
 
