@@ -38,8 +38,15 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    node *n = malloc(sizeof(node));
     FILE *dict = fopen(dictionary, "r");
+
+    for
+        node *n = malloc(sizeof(node));
+        strcpy(n->word, dict[i]);
+        
+
+
+
     node *tab = malloc(sizeof(table));
 
 
