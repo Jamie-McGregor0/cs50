@@ -26,9 +26,9 @@ unsigned int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    for (node *n = table[hash(word)]; n->next != NULL; n = n->next)
+    for (node *n = table[hash(word)]; n != NULL; n = n->next)
     {
-        char *w[strlen(word)];
+        char w[strlen(word)];
         strcpy(w, word);
 
         for (int i = 0; i < strlen(word); i++)
