@@ -74,7 +74,12 @@ bool load(const char *dictionary)
             return false;
         }
 
-        strcpy(n->word, buffer);
+            // Convert buffer to lowercase BEFORE storing
+        for (int i = 0; buffer[i] != '\0'; i++)
+        {
+            n->word[i] = tolower((unsigned char)buffer[i]);
+        }
+        n->word[strlen(buffer)] = '\0'; // Manually null-terminate
 
         n->next = table[hash(n->word)];
         table[hash(n->word)] = n;
