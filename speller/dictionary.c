@@ -44,7 +44,7 @@ bool load(const char *dictionary)
         return;
     }
 
-    char word[]
+    char word[999];
 
     while (fscanf(dict, "%s", word) != EOF)
     {
@@ -54,7 +54,7 @@ bool load(const char *dictionary)
             return;
         }
 
-        strcpy(n->word, word[]);
+        strcpy(n->word, word);
 
 
 
