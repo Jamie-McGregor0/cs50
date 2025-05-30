@@ -26,7 +26,7 @@ unsigned int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    for (; table[hash(*word)]->next != NULL; *word = word->next)
+    for (node *n = ; table[hash(*word)]->next != NULL; *word = word->next)
     {
         if (strcasecmp(word.word, ))
     }
