@@ -87,6 +87,13 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    for (int i = 0; i < N; i ++)
+    {
+        if (table[i]->next != NULL)
+        {
+            unload()
+        }
+    }
 
     return false;
 }
