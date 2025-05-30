@@ -37,7 +37,7 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *dict = fopen(dictionary, "r");
-    fread()
+    node *tab = malloc(sizeof(table));
 
     return false;
 }
