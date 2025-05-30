@@ -2,6 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <string/h>
 
 #include "dictionary.h"
 
@@ -37,6 +38,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    node *n = malloc(sizeof(node));
     FILE *dict = fopen(dictionary, "r");
     node *tab = malloc(sizeof(table));
 
