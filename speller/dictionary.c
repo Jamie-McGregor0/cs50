@@ -44,7 +44,7 @@ bool load(const char *dictionary)
         return;
     }
 
-    while (fread(dict, 1 ,1 , dictionary) == 1)
+    while (fscanf(disct, "%s", WP))
         node *n = malloc(sizeof(node));
         strcpy(n->word, dict[i]);
 
