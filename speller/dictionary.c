@@ -43,12 +43,12 @@ bool load(const char *dictionary)
         return false;
     }
 
-    char word_buffer[LENGTH + 1];
-    
+    char buffer[LENGTH + 1];
 
 
 
-    while (fscanf(dict, "%s", word) == 1)
+
+    while (fscanf(dict, "%s", buffer) == 1)
     {
         node *n = malloc(sizeof(node));
         if (n == NULL)
@@ -57,7 +57,7 @@ bool load(const char *dictionary)
             return false;
         }
 
-        strcpy(n->word, word);
+        strcpy(n->word, buffer);
 
         n->next = table[hash(n->word)];
         table[hash(n->word)] = n;
