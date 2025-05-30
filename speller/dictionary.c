@@ -43,7 +43,10 @@ bool load(const char *dictionary)
         return false;
     }
 
-    char word[999];
+    char word_buffer[LENGTH + 1];
+    
+
+
 
     while (fscanf(dict, "%s", word) == 1)
     {
