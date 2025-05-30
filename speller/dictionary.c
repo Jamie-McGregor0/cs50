@@ -28,14 +28,16 @@ bool check(const char *word)
     // TODO
     for (node *n = table[hash(word)]; n->next != NULL; n = n->next)
     {
-        char *w
+        char *w[strlen(word)];
+        strcpy(w, word);
+
         for (int i = 0; i < strlen(word); i++)
         {
-            word[i] = tolower(word[i]);
+            w[i] = tolower(w[i]);
         }
 
 
-        if (strcmp(n->word, word) ==  0)
+        if (strcmp(n->word, w) ==  0)
         {
             return true;
         }
