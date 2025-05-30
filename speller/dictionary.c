@@ -113,8 +113,8 @@ bool unload(void)
             n = n->next;
             free(tmp);
         }
-        table[i] =  NULL;
+        table[i] = NULL;
     }
-
+    dict_size = 0;
     return true;
 }
