@@ -114,11 +114,11 @@ bool unload(void)
 
         while (n != NULL)
         {
+            node *tmp = n;
             n = n->next;
-            tmp = tmp->next;
             free(tmp);
-
         }
+        table[i] =  NULL;
     }
 
     return true;
