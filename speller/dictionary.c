@@ -96,6 +96,7 @@ bool unload(void)
         {
             n = n->next;
             free(tmp);
+            tmp = tmp->next;
         }
     }
 
