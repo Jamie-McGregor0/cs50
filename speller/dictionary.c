@@ -39,6 +39,10 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *dict = fopen(dictionary, "r");
+    if (dict == NULL)
+    {
+        return;
+    }
 
     while (fread(dict, 1 ,1 , dictionary) == 1)
         node *n = malloc(sizeof(node));
