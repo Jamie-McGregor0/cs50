@@ -107,11 +107,6 @@ bool unload(void)
     {
         node *n = table[i];
 
-        if (n == NULL)
-        {
-            return false;
-        }
-
         while (n != NULL)
         {
             node *tmp = n;
