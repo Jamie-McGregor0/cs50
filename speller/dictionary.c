@@ -105,7 +105,6 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i ++)
     {
-        node *tmp = table[i];
         node *n = table[i];
 
         if (n == NULL)
@@ -113,11 +112,12 @@ bool unload(void)
             return false;
         }
 
-        while (tmp->next != NULL)
+        while (n != NULL)
         {
             n = n->next;
-            free(tmp);
             tmp = tmp->next;
+            free(tmp);
+
         }
     }
 
