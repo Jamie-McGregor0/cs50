@@ -3,7 +3,6 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
-#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -29,7 +28,7 @@ bool check(const char *word)
     // TODO
     for (node *n = table[hash(word)]; n->next != NULL; n = n->next)
     {
-        string w[strlen(word)];
+        char *w[strlen(word)];
         strcpy(w, word);
 
         for (int i = 0; i < strlen(word); i++)
