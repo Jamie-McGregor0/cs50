@@ -47,10 +47,6 @@ bool load(const char *dictionary)
     }
 
     char buffer[LENGTH + 1];
-
-
-
-
     while (fscanf(dict, "%s", buffer) == 1)
     {
         node *n = malloc(sizeof(node));
@@ -77,7 +73,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return dict_size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
