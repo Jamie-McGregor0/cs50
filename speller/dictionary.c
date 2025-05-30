@@ -92,6 +92,11 @@ bool unload(void)
         node *tmp = table[i];
         node *n = table[i];
 
+        if (n == NULL)
+        {
+            return false;
+        }
+
         while (tmp->next != NULL)
         {
             n = n->next;
@@ -100,5 +105,5 @@ bool unload(void)
         }
     }
 
-    return false;
+    return true;
 }
