@@ -44,6 +44,8 @@ bool load(const char *dictionary)
         return;
     }
 
+    char word[]
+
     while (fscanf(dict, "%s", word) != EOF)
     {
         node *n = malloc(sizeof(node));
