@@ -16,7 +16,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 26 * ((26 * 27) + 1);
 
 // Hash table
 node *table[N];
@@ -33,6 +33,7 @@ bool check(const char *word)
         char w[strlen(word) + 1];
         strcpy(w, word);
 
+        //copy the word
         for (int i = 0; i < strlen(word); i++)
         {
             w[i] = tolower(w[i]);
@@ -51,7 +52,17 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    if (toupper(word[1]) == '\0')
+    {
+        return (toupper(word[0]) - 'A') * ((26 * 27) + 1) + 26;
+    }
+
+    if (toupper(word[2]) == '\0')
+    {
+        return (toupper(word[0]) - 'A') * ((26 * 27) + 1) + (toupper(word[1]) - 'A') * 27 + 26;
+    }
+
+    return (toupper(word[0]) - 'A') * ((26 * 27) + 1) + (toupper(word[1]) - 'A') * 27 + (toupper(word[2]) - 'A');
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -74,12 +85,11 @@ bool load(const char *dictionary)
             return false;
         }
 
-            // Convert buffer to lowercase BEFORE storing
         for (int i = 0; buffer[i] != '\0'; i++)
         {
             n->word[i] = tolower((unsigned char)buffer[i]);
         }
-        n->word[strlen(buffer)] = '\0'; // Manually null-terminate
+        n->word[strlen(buffer)] = '\0';
 
         n->next = table[hash(n->word)];
         table[hash(n->word)] = n;
