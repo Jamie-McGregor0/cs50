@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 #include "dictionary.h"
 
@@ -16,7 +17,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26 * ((26 * 27) + 1);
+const unsigned int N = 27 * 27 *27;
 
 // Hash table
 node *table[N];
@@ -28,18 +29,18 @@ unsigned int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    for (node *n = table[hash(word)]; n != NULL; n = n->next)
+    int len = strlen(word);
+    char w[len + 1];
+    strcpy(w, word);
+
+    for (int i = 0; i < len; i ++)
     {
-        char w[strlen(word) + 1];
-        strcpy(w, word);
+        w[i] = tolower(w[i]);
+    }
+    w[len] = '\0';
 
-        //copy the word
-        for (int i = 0; i < strlen(word); i++)
-        {
-            w[i] = tolower(w[i]);
-        }
-
-
+    for (node *n = table[hash(w)]; n != NULL; n = n->next)
+    {
         if (strcmp(n->word, w) ==  0)
         {
             return true;
@@ -51,19 +52,36 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    if (toupper(word[1]) == '\0')
+    int L = 4;
+    int len = strlen(word);
+    unsigned int hv = 0;
+
+    int x = fmin(len, L);
+
+    for (int i = 0; i < x; i ++)
     {
-        return (toupper(word[0]) - 'A') * ((26 * 27) + 1) + 26;
+        if (isalpha(word[i]))
+        {
+            hv = hv * 27 + word[i] - 'a';
+        }
+
+        else
+        {
+            hv = hv * 27 + 26;
+        }
     }
 
-    if (toupper(word[2]) == '\0')
+    if (len < L)
     {
-        return (toupper(word[0]) - 'A') * ((26 * 27) + 1) + (toupper(word[1]) - 'A') * 27 + 26;
+        for (int i = 0; i < L - len; i ++)
+        {
+            hv = hv * 27 + 26;
+        }
     }
+return hv % N;
 
-    return (toupper(word[0]) - 'A') * ((26 * 27) + 1) + (toupper(word[1]) - 'A') * 27 + (toupper(word[2]) - 'A');
 }
+
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
@@ -85,11 +103,11 @@ bool load(const char *dictionary)
             return false;
         }
 
-        for (int i = 0; buffer[i] != '\0'; i++)
+        for (int i = 0; buffer[i] != '\0' && i < LENGTH; i++)
         {
             n->word[i] = tolower((unsigned char)buffer[i]);
         }
-        n->word[strlen(buffer)] = '\0';
+        n->word[strlen(buffer) < LENGTH ? strlen(buffer) : LENGTH] = '\0';
 
         n->next = table[hash(n->word)];
         table[hash(n->word)] = n;
@@ -128,3 +146,4 @@ bool unload(void)
     dict_size = 0;
     return true;
 }
+
