@@ -7,8 +7,8 @@ length = len(n)
 sum = 0
 
 for i in range(length):
-    if i % 2 != 0:
-        print(int(n))
+    if i % 2 != 0 or i == 0:
+        print(int(n[i]))
         sum += int(n[i]) * 2
 
 
