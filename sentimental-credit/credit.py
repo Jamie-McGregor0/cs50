@@ -9,7 +9,9 @@ sum = 0
 for i in range(length):
     if i % 2 == 0:
         m = int(n[i]) * 2
-        if  m >= 10
+        if  m >= 10:
+            sum += m // 10 + m % 10
+        else:
             sum += m
 
 
