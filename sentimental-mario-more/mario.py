@@ -1,6 +1,6 @@
-from cs50 import get_string
+from cs50 import get_int
 
-n = get_string("Height: ")
+n = get_int("Height: ")
 
 for i in range(n):
     print(" " * (n - i) + "  " + " " * (n - i))
