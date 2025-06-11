@@ -16,6 +16,7 @@ for i in range(length):
             sum += m
 
     else:
+        print(m)
         sum += m
 
 print(sum)
