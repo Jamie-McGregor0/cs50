@@ -1,8 +1,8 @@
-from cs50 import get_int
+from cs50 import get_string
 
-n = get_int("Number: ")
+n = get_string("Number: ")
 
-length = len(str(n))
+length = len(n)
 
 sum = 0
 
