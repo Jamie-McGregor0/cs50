@@ -2,10 +2,13 @@ from cs50 import get_int
 
 n = get_int("Number: ")
 
-n_test = n
-length = len(str(n_test))
+length = len(str(n))
 
+sum = 0
 
+for i in range(length)
+    if i % 2 != 0
+        sum += int(n)
 
 
 print(length)
