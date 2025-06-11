@@ -1,5 +1,5 @@
 import cs50
 
-name = get_string("What is your name? ")
+name = cs50.get_string("What is your name? ")
 
 print(f"Hello, {name}")
