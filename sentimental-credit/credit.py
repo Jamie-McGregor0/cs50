@@ -8,8 +8,9 @@ sum = 0
 
 for i in range(length):
     if i % 2 == 0:
-        for j in range(len(str(int(n[i]) * 2)))
-            sum += 
+        m = int(n[i]) * 2
+        if  m >= 10
+            sum += m
 
 
 print(sum)
