@@ -8,7 +8,8 @@ sum = 0
 
 for i in range(length):
     if i % 2 == 0:
-        sum += int(n[i]) * 2
+        for j in range(len(str(int(n[i]) * 2)))
+        sum +=
 
 
 print(sum)
