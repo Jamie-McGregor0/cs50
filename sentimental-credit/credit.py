@@ -6,9 +6,9 @@ length = len(str(n))
 
 sum = 0
 
-for i in range(length)
-    if i % 2 != 0
-        sum += int(n)
+for i in range(length):
+    if i % 2 != 0:
+        sum += int(n[i]) * 2
 
 
-print(length)
+print(sum)
