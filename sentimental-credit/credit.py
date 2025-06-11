@@ -4,19 +4,18 @@ n = get_string("Number: ")
 
 length = len(n)
 
-sum1 = 0
-sum2 = 0
+sum = 0
 
 for i in range(length):
+    m = int(n[i])
     if i % 2 == 0:
-        m = int(n[i]) * 2
+        m* 2
         if  m >= 10:
-            sum1 += m // 10 + m % 10
+            sum += m // 10 + m % 10
         else:
-            sum1 += m
+            sum += m
 
     else:
-        
-
+        sum += m
 
 print(sum)
