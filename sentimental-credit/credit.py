@@ -20,8 +20,8 @@ for i in range(length):
 
 if sum % 10 == 0：
     if length == 15 and n[0] + n[1] in [34, 37]:
-        print(AMEX)
-    elif length == 16 and :
-
+        print("AMEX")
+    elif length == 16 and n[0] + n[1] in [51, 52, 53, 54, 55]:
+        print("")
 
     print(sum)
