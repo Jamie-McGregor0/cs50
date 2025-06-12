@@ -26,24 +26,24 @@ int main(void){
 
     printf("%i", sum);
 
-    // if(sum % 10 == 0){
+    if(sum % 10 == 0){
 
-    //     if((l == 13 || l == 16) && f == 4)
-    //         printf("VISA\n");
+        if((l == 13 || l == 16) && f == 4)
+            printf("VISA\n");
 
-    //     else if(l == 15 && f == 3 && (s == 4 || s == 7))
-    //         printf("AMEX\n");
+        else if(l == 15 && f == 3 && (s == 4 || s == 7))
+            printf("AMEX\n");
 
-    //     else if(f == 5 && s <= 5)
-    //         printf("MASTERCARD\n");
+        else if(f == 5 && s <= 5)
+            printf("MASTERCARD\n");
 
-    //     else
-    //         printf("INVALID\n");
+        else
+            printf("INVALID\n");
 
-    // }
+    }
 
-    // else
-    //     printf("INVALID\n");
+    else
+        printf("INVALID\n");
 
 }
 
