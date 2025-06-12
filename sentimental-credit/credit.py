@@ -1,22 +1,9 @@
 from cs50 import get_string
 
-n = get_string("Number: ")
+def main():
+    n = get_string("Number: ")
 
-length = len(n)
 
-sum = 0
-
-for i in range(length):
-    m = int(n[i])
-    if i % 2 == 0:
-
-        if  m * 2 >= 10:
-            sum += m * 2 // 10 + m * 2% 10
-        else:
-            sum += m * 2
-
-    else:
-        sum += m
 
 print(sum)
 if sum % 10 == 0:
@@ -29,3 +16,20 @@ if sum % 10 == 0:
 
 else:
     print("INVALID")
+
+
+def isvalid():
+    length = len(n)
+    sum = 0
+
+    for i in range(length):
+        m = int(n[i])
+        if i % 2 == 0:
+
+            if  m * 2 >= 10:
+                sum += m * 2 // 10 + m * 2% 10
+            else:
+                sum += m * 2
+
+        else:
+            sum += m
