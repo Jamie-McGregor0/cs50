@@ -18,4 +18,6 @@ for i in range(length):
     else:
         sum += m
 
+if sum % 10 == 0：
+    
 print(sum)
