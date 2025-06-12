@@ -21,6 +21,8 @@ if sum % 10 == 0:
         print("MASTERCARD")
     elif length == 13 or length == 16 and n[0] == "4":
         print("VISA")
+    else:
+        print("INVALID")
 
 else:
     print("INVALID")
