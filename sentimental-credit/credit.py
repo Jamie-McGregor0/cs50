@@ -14,7 +14,6 @@ for i in range(length, 0, -1):
     else:
         sum += m * 2 // 10 + m * 2 % 10
 
-print(sum)
 if sum % 10 == 0:
     if length == 15 and n[0] + n[1] in ["34", "37"]:
         print("AMEX")
