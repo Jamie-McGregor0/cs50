@@ -19,5 +19,7 @@ for i in range(length):
         sum += m
 
 if sum % 10 == 0：
+    
+
 
     print(sum)
