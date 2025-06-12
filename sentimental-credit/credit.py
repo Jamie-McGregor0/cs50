@@ -19,7 +19,8 @@ for i in range(length):
         sum += m
 
 if sum % 10 == 0：
-    
+    if length == 15 and n[0] + n[1] in [34, 37]:
+        print()
 
 
     print(sum)
