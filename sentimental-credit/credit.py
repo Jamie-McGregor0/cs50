@@ -6,8 +6,8 @@ length = len(n)
 
 sum = 0
 
-for i in range(length, 0, -1):
-    m = int(n[length - i])
+for i in range(length, -1, -1):
+    m = int(n[i])
     if (length - i) % 2 == 0:
             sum += m * 2 // 10 + m * 2 % 10
 
