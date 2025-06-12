@@ -26,4 +26,3 @@ if sum % 10 == 0:
 
 else:
     print("INVALID")
-
