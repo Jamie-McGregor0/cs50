@@ -18,6 +18,7 @@ for i in range(length):
     else:
         sum += m
 
+print(sum)
 if sum % 10 == 0:
     if length == 15 and n[0] + n[1] in [34, 37]:
         print("AMEX")
@@ -26,4 +27,4 @@ if sum % 10 == 0:
     elif length == 13 or length == 16 and n[0] == 4:
         print("VISA")
 
-    print(sum)
+
