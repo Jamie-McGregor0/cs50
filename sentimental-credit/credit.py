@@ -9,10 +9,10 @@ sum = 0
 for i in range(length, 0, -1):
     m = int(n[i - 1])
     if (length - i) % 2 == 0:
-            sum += m * 2 // 10 + m * 2 % 10
+        sum += m
 
     else:
-        sum += m
+        sum += m * 2 // 10 + m * 2 % 10
 
 print(sum)
 if sum % 10 == 0:
